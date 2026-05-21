@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de cotacao HC Saude</title>
+    <meta name="description" content="Preencha os dados principais para receber uma cotacao de plano de saude mais precisa.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Formulario de cotacao HC Saude">
+    <meta property="og:description" content="Preencha os dados principais para receber uma cotacao de plano de saude mais precisa.">
+    <meta property="og:image" content="../hc-saude-form-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="./formulario.css">
+  </head>
+  <body>
+    <main class="quote-shell">
+      <section class="quote-brand" aria-label="HC Saude">
+        <div class="brand-top">
+          <span>
+            <strong>HC Saude</strong>
+            <small>Formulario seguro de cotacao</small>
+          </span>
+        </div>
+        <div class="brand-copy">
+          <h1>Cotacao de plano de saude</h1>
+          <p>Preencha os dados principais uma unica vez. A equipe usa essas informacoes para comparar opcoes com mais precisao.</p>
+        </div>
+        <img class="brand-preview" src="../hc-saude-form-preview.png" alt="Arte do formulario de cotacao HC Saude">
+      </section>
+
+      <section class="quote-panel">
+        <div class="quote-card" aria-live="polite">
+          <div class="loading-state" id="loadingState">
+            <span class="pulse"></span>
+            <p>Carregando seu formulario...</p>
+          </div>
+
+          <div class="message-state error-state" id="errorState" hidden>
+            <strong>Link indisponivel</strong>
+            <p id="errorText">Nao foi possivel abrir este formulario.</p>
+          </div>
+
+          <div id="formState" hidden>
+            <header class="card-head">
+              <p class="eyebrow" id="contactGreeting">Formulario rapido</p>
+              <h2 id="formTitle">Formulario de cotacao HC Saude</h2>
+              <p id="formDescription">Responda os dados abaixo para a equipe preparar sua cotacao.</p>
+            </header>
+
+            <form id="quoteForm">
+              <div class="fields" id="fieldList"></div>
+              <div class="notice" id="formNotice" hidden></div>
+              <button class="submit-button" id="submitButton" type="submit">Enviar dados</button>
+            </form>
+          </div>
+
+          <div class="message-state success-state" id="successState" hidden>
+            <strong id="successTitle">Formulario recebido</strong>
+            <p id="successMessage">Obrigado. Ja recebemos seus dados para preparar a cotacao.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./runtime-config.js"></script>
+    <script type="module" src="./formulario.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecionando</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var marker = '/cotacao/';
+        var path = window.location.pathname || '';
+        var index = path.indexOf(marker);
+        var suffix = index >= 0 ? path.slice(index + marker.length).split('/').filter(Boolean)[0] : '';
+        if (suffix) {
+          var prefix = path.slice(0, index);
+          window.location.replace(prefix + marker + '?code=' + encodeURIComponent(suffix) + window.location.hash);
+          return;
+        }
+        document.body.textContent = 'Pagina nao encontrada.';
+      }());
+    </script>
+  </body>
+</html>
