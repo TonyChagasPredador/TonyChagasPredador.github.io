@@ -118,6 +118,7 @@ textarea {
 
 .brand-copy {
   max-width: 680px;
+  min-width: 0;
 }
 
 .brand-copy h1 {
@@ -135,6 +136,7 @@ textarea {
   font-size: 17px;
   line-height: 1.65;
   font-weight: 760;
+  overflow-wrap: break-word;
 }
 
 .brand-preview {
@@ -154,11 +156,13 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: clamp(14px, 3vw, 38px);
+  overflow: hidden;
 }
 
 .quote-card {
   width: 100%;
   max-width: 560px;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -188,11 +192,13 @@ h2 {
 }
 
 .card-head p:last-child {
+  max-width: 100%;
   margin: 10px 0 0;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.55;
   font-weight: 730;
+  overflow-wrap: break-word;
 }
 
 form {
@@ -472,6 +478,7 @@ textarea:focus {
 
   .quote-card {
     max-width: none;
+    width: 100%;
     box-shadow: 0 14px 40px rgba(17, 36, 63, 0.12);
   }
 }
