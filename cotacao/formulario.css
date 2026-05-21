@@ -462,6 +462,7 @@ textarea:focus {
   }
 
   .brand-copy p {
+    max-width: 34ch;
     margin-top: 12px;
     font-size: 14px;
     line-height: 1.55;
@@ -486,6 +487,10 @@ textarea:focus {
 @media (max-width: 540px) {
   .card-head {
     padding: 20px 16px 16px;
+  }
+
+  .card-head p:last-child {
+    max-width: 32ch;
   }
 
   h2 {
